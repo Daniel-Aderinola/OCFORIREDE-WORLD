@@ -92,7 +92,7 @@ export default function SubmitCV(){
                 }} onClick={()=>fileInputRef.current?.click()}>
                   {!file ? (
                     <div>
-                      <div className="mb-2 text-forest">Drag your CV here or click to browse</div>\n                      <div className="text-xs text-forest/70">PDF or DOC up to 5MB</div>
+                      <div className="mb-2 text-forest">Drag your CV here or click to browse</div>                     <div className="text-xs text-forest/70">PDF or DOC up to 5MB</div>
                     </div>
                   ) : (
                     <div className="flex items-center justify-center gap-3">
