@@ -3,6 +3,7 @@ import PackageCard from '../components/PackageCard'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import api from '../utils/api'
+import { AnimatedButton } from '../components/AnimatedButton'
 
 const packages = [
   { name: 'Basic', duration: '45 minutes', price: '₦15,000 / £25', description: 'We rewrite and optimise your CV', features: ['CV rewrite','ATS optimisation'] },
@@ -62,7 +63,7 @@ export default function BookConsultant(){
               </div>
             </div>
             <textarea {...register('notes')} placeholder="What do you need help with?" className="w-full rounded-2xl border border-sand bg-white px-4 py-3 text-forest" rows={5}></textarea>
-            <button className="bg-forest text-cream rounded-full py-3 font-medium" type="submit">Confirm My Booking →</button>
+            <AnimatedButton className="bg-forest text-cream rounded-full py-3 font-medium hover:bg-forest/90" type="submit">Confirm My Booking →</AnimatedButton>
           </form>
         </section>
       </div>

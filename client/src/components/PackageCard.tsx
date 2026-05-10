@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { AnimatedButton } from './AnimatedButton'
 
 interface Props { name: string; duration: string; price: string; description: string; features: string[]; featured?: boolean; onSelect?: ()=>void }
 
@@ -18,7 +19,7 @@ export default function PackageCard({ name, duration, price, description, featur
       <ul className={`mt-4 space-y-2 ${featured ? 'text-cream/80' : 'text-forest/70'}`}>
         {features.map((f,i)=>(<li key={i} className={`text-sm flex items-center gap-2`}><span className="text-terra">✓</span> {f}</li>))}
       </ul>
-      <button onClick={onSelect} className={featured ? 'bg-terra hover:bg-terra/90 text-white rounded-full px-4 py-2 mt-6 w-full transition' : 'bg-forest text-cream rounded-full px-4 py-2 mt-6 w-full transition'}>Select This Package →</button>
+      <AnimatedButton onClick={onSelect} className={featured ? 'bg-terra hover:bg-terra/90 text-white rounded-full px-4 py-2 mt-6 w-full' : 'bg-forest text-cream rounded-full px-4 py-2 mt-6 w-full'}>Select This Package →</AnimatedButton>
     </motion.div>
   )
 }

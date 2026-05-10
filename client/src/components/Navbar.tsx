@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { AnimatedLink, AnimatedButton } from './AnimatedButton'
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -43,7 +44,7 @@ export default function Navbar(){
           ))}
         </nav>
         <div className="hidden md:block">
-          <Link to="/submit-cv" className="bg-forest text-cream rounded-full px-4 py-2 text-sm">Get Started</Link>
+          <AnimatedLink to="/submit-cv" className="inline-block bg-forest text-cream rounded-full px-4 py-2 text-sm hover:shadow-lg hover:bg-forest/90">Get Started</AnimatedLink>
         </div>
         <button className="md:hidden" onClick={()=>setOpen(true)} aria-label="Open menu">☰</button>
       </div>

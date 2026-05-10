@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { AnimatedButton, AnimatedLink } from './AnimatedButton'
 
 export default function Footer(){
   return (
@@ -27,7 +28,7 @@ export default function Footer(){
           <h4 className="font-semibold text-cream/90">Newsletter</h4>
           <div className="mt-3 flex gap-2">
             <input className="rounded-full px-4 py-2 bg-cream text-forest placeholder-forest/40" placeholder="Email address" />
-            <button className="bg-terra hover:bg-terra/90 text-white rounded-full px-4 py-2 transition">Subscribe</button>
+            <AnimatedButton className="bg-terra hover:bg-terra/90 text-white rounded-full px-4 py-2">Subscribe</AnimatedButton>
           </div>
         </div>
       </div>

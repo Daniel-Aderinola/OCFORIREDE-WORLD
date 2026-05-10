@@ -7,6 +7,7 @@ import { CVSubmission } from '../types'
 import SuccessMessage from '../components/SuccessMessage'
 import Spinner from '../components/Spinner'
 import { motion } from 'framer-motion'
+import { AnimatedButton } from '../components/AnimatedButton'
 
 const schema = z.object({
   fullName: z.string().min(1),
@@ -105,9 +106,9 @@ export default function SubmitCV(){
                 <input ref={fileInputRef} type="file" onChange={handleFileChange} className="hidden" />
               </div>
               <div>
-                <button type="submit" disabled={submitting} className="bg-forest text-cream rounded-full w-full py-4 flex items-center justify-center font-medium">
+                <AnimatedButton type="submit" disabled={submitting} className="bg-forest text-cream rounded-full w-full py-4 flex items-center justify-center font-medium hover:bg-forest/90 disabled:opacity-60 disabled:cursor-not-allowed">
                   {submitting? <><Spinner /> <span className="ml-3">Submitting...</span></>: 'Submit CV'}
-                </button>
+                </AnimatedButton>
               </div>
             </form>
           </div>

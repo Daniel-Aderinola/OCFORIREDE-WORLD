@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { AnimatedButton } from '../components/AnimatedButton'
 
 const page = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.4 } } }
 const section = {
@@ -95,12 +96,12 @@ export default function Contact(){
                   placeholder="Tell us more..."
                 />
               </div>
-              <button
+              <AnimatedButton
                 type="submit"
-                className="w-full rounded-full bg-forest text-cream px-6 py-3 font-semibold hover:bg-forest/90 transition"
+                className="w-full rounded-full bg-forest text-cream px-6 py-3 font-semibold hover:bg-forest/90"
               >
                 Send Message
-              </button>
+              </AnimatedButton>
             </form>
           </div>
         </div>
