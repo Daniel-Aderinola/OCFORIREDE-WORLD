@@ -31,10 +31,10 @@ app.use(express.static(clientBuildPath))
 
 // SPA fallback - serve index.html for all unmatched routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(clientBuildPath, 'index.html'))
+    res.sendFile(path.join(clientBuildPath, 'index.html'))
 })
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${PORT}`)
 })
