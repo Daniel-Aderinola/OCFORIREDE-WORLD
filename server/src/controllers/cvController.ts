@@ -10,7 +10,7 @@ export async function submitCV(req: Request, res: Response) {
         if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() })
 
         const body = req.body
-        const file = req.file
+        const file = (req as any).file
         const submissionsPath = path.join(__dirname, '..', '..', 'submissions.json')
         const entry = { id: Date.now(), body, file: file?.filename }
         const prior = fs.existsSync(submissionsPath) ? JSON.parse(fs.readFileSync(submissionsPath, 'utf-8')) : []
