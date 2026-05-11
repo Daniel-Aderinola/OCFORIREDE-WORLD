@@ -28,18 +28,18 @@ export default function BookConsultant(){
   }
 
   return (
-    <motion.main className="bg-transparent pt-32 px-6 lg:px-20 pb-16" initial={{opacity:0}} animate={{opacity:1}}>
+    <motion.main className="bg-transparent pt-32 px-6 md:px-12 lg:px-20 pb-16" initial={{opacity:0}} animate={{opacity:1}}>
       <div className="container mx-auto">
-        <h1 className="font-display text-5xl text-forest">Book a Consultation Session</h1>
-        <p className="mt-4 text-forest/70">Work 1-on-1 with a nursing career expert. Choose the package that fits your needs.</p>
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-forest">Book a Consultation Session</h1>
+        <p className="mt-4 text-base md:text-lg text-forest/70">Work 1-on-1 with a nursing career expert. Choose the package that fits your needs.</p>
 
-        <section className="mt-8 grid lg:grid-cols-3 gap-6">
+        <section className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packages.map((p)=>(
             <PackageCard key={p.name} name={p.name} duration={p.duration} price={p.price} description={p.description} features={p.features} featured={!!p.featured} onSelect={()=>onSelect(p.name)} />
           ))}
         </section>
 
-        <section className="mt-12 bg-white border border-sand rounded-2xl p-10 shadow-[0_12px_30px_rgba(27,67,50,0.08)]">          <h2 className="font-display text-2xl text-forest">Confirm your booking</h2>
+        <section className="mt-12 bg-white border border-sand rounded-2xl p-6 md:p-8 lg:p-10 shadow-[0_12px_30px_rgba(27,67,50,0.08)]">          <h2 className="font-display text-2xl md:text-3xl text-forest">Confirm your booking</h2>
           <form ref={formRef} className="mt-6 grid grid-cols-1 gap-4" onSubmit={handleSubmit(onSubmit)}>
             <input {...register('fullName')} placeholder="Full name" className="w-full rounded-2xl border border-sand bg-white px-4 py-3 text-forest" />
             <input {...register('email')} placeholder="Email address" className="w-full rounded-2xl border border-sand bg-white px-4 py-3 text-forest" />

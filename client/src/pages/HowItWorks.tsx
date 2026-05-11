@@ -3,16 +3,16 @@ import { motion } from 'framer-motion'
 
 export default function HowItWorks(){
   return (
-    <motion.main className="bg-transparent pt-32 px-6 lg:px-20 pb-20" initial={{opacity:0}} animate={{opacity:1}}>
+    <motion.main className="bg-transparent pt-32 px-6 md:px-12 lg:px-20 pb-20" initial={{opacity:0}} animate={{opacity:1}}>
       <div className="container mx-auto">
-        <section className="bg-white rounded-2xl p-12 text-center mb-16 border border-sand shadow-[0_12px_30px_rgba(27,67,50,0.08)]">
-          <h1 className="font-display text-5xl text-forest">We believe every nurse deserves a career that reflects their skill, dedication, and ambition.</h1>
-          <p className="mt-4 text-forest/70">From CV submission to consulting, we support every step of your journey.</p>
+        <section className="bg-white rounded-2xl p-6 md:p-8 lg:p-12 text-center mb-16 border border-sand shadow-[0_12px_30px_rgba(27,67,50,0.08)]">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-forest">We believe every nurse deserves a career that reflects their skill, dedication, and ambition.</h1>
+          <p className="mt-4 text-base md:text-lg text-forest/70">From CV submission to consulting, we support every step of your journey.</p>
         </section>
                 
         <section className="mt-12">
-          <h2 className="font-display text-4xl text-forest mb-8">Our Process</h2>
-          <div className="grid lg:grid-cols-4 gap-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-forest mb-8">Our Process</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {step: '1', title: 'Upload Your CV', desc: 'Share your professional profile and career goals'},
               {step: '2', title: 'Expert Review', desc: 'Our team thoroughly reviews your qualifications'},
@@ -31,8 +31,8 @@ export default function HowItWorks(){
         </section>
                 
         <section className="mt-16">
-          <h2 className="font-display text-4xl text-forest mb-8">Meet Our Consultants</h2>
-          <div className="grid lg:grid-cols-3 gap-6">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-forest mb-8">Meet Our Consultants</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {name: 'Dr. Chioma Okafor', title: 'Chief Nursing Officer', bio: '15+ years in healthcare recruitment and career coaching.'},
               {name: 'Zainab Hassan', title: 'Career Consultant', bio: 'Specializes in UK and international nursing placements.'},
@@ -51,8 +51,8 @@ export default function HowItWorks(){
         </section>
                 
         <section className="mt-16">
-          <h2 className="font-display text-4xl text-forest mb-8">Why NurseConnect</h2>
-          <div className="bg-white rounded-2xl p-8 space-y-3 border border-sand shadow-[0_12px_30px_rgba(27,67,50,0.08)]">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-forest mb-8">Why NurseConnect</h2>
+          <div className="bg-white rounded-2xl p-6 md:p-8 space-y-3 border border-sand shadow-[0_12px_30px_rgba(27,67,50,0.08)]">
             {[
               'Vetted healthcare employers worldwide',
               'Expert career consultants with 10+ years experience',

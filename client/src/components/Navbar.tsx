@@ -50,23 +50,32 @@ export default function Navbar(){
       </div>
 
       {open && (
-        <motion.aside initial={{x:'100%'}} animate={{x:0}} exit={{x:'100%'}} className="fixed top-0 right-0 h-full w-80 bg-cream p-6 shadow-lg">
-          <button onClick={()=>setOpen(false)} className="mb-6">Close</button>
-          <nav className="flex flex-col gap-2">
-            {navItems.map((item)=> (
-              <Link
-                key={item.label}
-                to={item.to}
-                onClick={()=>setOpen(false)}
-                className={`rounded-2xl px-4 py-3 text-base font-medium transition-all ${isActive(item.to) ? 'bg-forest text-cream' : 'text-forest hover:bg-white'}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link to="/submit-cv" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-3 text-base font-medium text-forest hover:bg-white">Submit CV</Link>
-            <Link to="/book-consultant" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-3 text-base font-medium text-forest hover:bg-white">Book a Consultant</Link>
-          </nav>
-        </motion.aside>
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 bg-forest/30 backdrop-blur-sm z-40"
+          />
+          <motion.aside initial={{x:'100%'}} animate={{x:0}} exit={{x:'100%'}} transition={{ type: 'spring', stiffness: 300, damping: 20 }} className="fixed top-0 right-0 h-screen w-full sm:w-80 bg-cream p-6 shadow-lg z-50">
+            <button onClick={()=>setOpen(false)} className="mb-6 text-xl text-forest hover:text-forest/60 transition" aria-label="Close menu">✕</button>
+            <nav className="flex flex-col gap-2">
+              {navItems.map((item)=> (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  onClick={()=>setOpen(false)}
+                  className={`rounded-2xl px-4 py-3 text-base font-medium transition-all ${isActive(item.to) ? 'bg-forest text-cream' : 'text-forest hover:bg-white'}`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link to="/submit-cv" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-3 text-base font-medium text-forest hover:bg-white">Submit CV</Link>
+              <Link to="/book-consultant" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-3 text-base font-medium text-forest hover:bg-white">Book a Consultant</Link>
+            </nav>
+          </motion.aside>
+        </>
       )}
     </header>
   )

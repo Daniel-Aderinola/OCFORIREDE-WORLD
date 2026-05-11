@@ -63,12 +63,12 @@ export default function SubmitCV(){
 
   return (
     <motion.main className="bg-transparent" initial={{opacity:0}} animate={{opacity:1}}>
-      <section className="pt-32 pb-16 px-6 lg:px-20 bg-cream border-b border-sand">
-        <div className="container mx-auto grid lg:grid-cols-2 gap-8">
+      <section className="pt-32 pb-16 px-6 md:px-12 lg:px-20 bg-cream border-b border-sand">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <div className="text-sm text-forest/70">Home / Submit CV</div>
-            <h1 className="font-display text-6xl text-forest mt-4">Submit Your CV</h1>
-            <p className="mt-4 text-forest/70">Fill in your details and upload your CV. Our team will review it within 48 hours and connect you with the right employers.</p>
+            <div className="text-xs md:text-sm text-forest/70">Home / Submit CV</div>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-forest mt-4">Submit Your CV</h1>
+            <p className="mt-4 text-base md:text-lg text-forest/70">Fill in your details and upload your CV. Our team will review it within 48 hours and connect you with the right employers.</p>
             <form className="mt-8 space-y-4" onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <label className="block text-sm text-forest/80 font-medium">Full Name</label>
@@ -112,16 +112,16 @@ export default function SubmitCV(){
               </div>
             </form>
           </div>
-          <aside className="sticky top-28">
-            <div className="bg-forest text-cream rounded-2xl p-8">
-              <h3 className="font-semibold">What happens next?</h3>
-              <ol className="mt-4 text-sm space-y-2 text-cream/80">
+          <aside className="sticky top-32 md:top-28 h-fit">
+            <div className="bg-forest text-cream rounded-2xl p-6 md:p-8">
+              <h3 className="font-semibold text-base md:text-lg">What happens next?</h3>
+              <ol className="mt-4 text-xs md:text-sm space-y-2 text-cream/80">
                 <li>1. CV reviewed</li>
                 <li>2. Matched to employers</li>
                 <li>3. You're contacted within 48 hours</li>
               </ol>
             </div>
-            <div className="bg-white rounded-2xl p-4 mt-6 text-center text-sm text-forest/80 border border-sand">              🔒 Confidential · ✅ Expert Review · ⚡ 48hr Response
+            <div className="bg-white rounded-2xl p-3 md:p-4 mt-4 md:mt-6 text-center text-xs md:text-sm text-forest/80 border border-sand">              🔒 Confidential · ✅ Expert Review · ⚡ 48hr Response
             </div>
           </aside>
         </div>

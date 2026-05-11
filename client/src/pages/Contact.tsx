@@ -19,13 +19,13 @@ export default function Contact(){
 
   return (
     <motion.main initial="hidden" animate="visible" variants={page} className="pt-32 pb-20">
-      <motion.section className="container mx-auto px-6 py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
-        <h1 className="font-display text-6xl lg:text-7xl text-forest font-bold leading-tight">Get in Touch</h1>
-        <p className="mt-6 text-lg text-forest/70 max-w-2xl">Have questions? We'd love to hear from you. Reach out to our team.</p>
+      <motion.section className="container mx-auto px-6 md:px-12 lg:px-6 py-8 md:py-12 lg:py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-forest font-bold leading-tight">Get in Touch</h1>
+        <p className="mt-6 text-base md:text-lg text-forest/70 max-w-2xl">Have questions? We'd love to hear from you. Reach out to our team.</p>
       </motion.section>
 
-      <motion.section className="container mx-auto px-6 py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
-        <div className="grid lg:grid-cols-2 gap-12">
+      <motion.section className="container mx-auto px-6 md:px-12 lg:px-6 py-8 md:py-12 lg:py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h2 className="font-display text-3xl text-forest font-bold mb-8">Contact Information</h2>
             <div className="space-y-6">
@@ -49,7 +49,7 @@ export default function Contact(){
             </div>
           </div>
 
-          <div className="bg-white/70 border border-sand rounded-3xl p-8">
+          <div className="bg-white/70 border border-sand rounded-3xl p-6 md:p-8">
             {submitted && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}

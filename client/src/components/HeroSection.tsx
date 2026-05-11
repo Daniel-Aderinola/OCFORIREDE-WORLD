@@ -60,8 +60,8 @@ export default function HeroSection(){
       </div>
       <div className="container mx-auto grid lg:grid-cols-2 gap-8 items-center relative z-10">
         <div className="relative">
-          <span className="inline-block bg-white/70 border border-sand rounded-full px-4 py-2 text-xs text-forest font-medium shadow-sm">Trusted by nurses across Africa & UK</span>
-          <motion.h1 className="font-display text-6xl lg:text-7xl text-forest font-bold leading-tight mt-6 overflow-hidden" initial="hidden" animate="visible" variants={container}>
+          <span className="inline-block bg-white/70 border border-sand rounded-full px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm text-forest font-medium shadow-sm">Trusted by nurses across Africa & UK</span>
+          <motion.h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-forest font-bold leading-tight mt-6 overflow-hidden" initial="hidden" animate="visible" variants={container}>
             {headline.split(' ').map((w,i)=> (
               <motion.span
                 key={i}
@@ -74,21 +74,21 @@ export default function HeroSection(){
               </motion.span>
             ))}
           </motion.h1>
-          <motion.p className="mt-6 text-lg text-forest/70" initial={{opacity:0,y:12}} animate={{opacity:1,y:0,transition:{delay:0.6}}}>Submit your CV and get matched with top healthcare employers — or book an expert consultant to prepare your application and ace your interview.</motion.p>
-          <motion.div className="mt-6 flex gap-4">
+          <motion.p className="mt-6 text-base md:text-lg text-forest/70" initial={{opacity:0,y:12}} animate={{opacity:1,y:0,transition:{delay:0.6}}}>Submit your CV and get matched with top healthcare employers — or book an expert consultant to prepare your application and ace your interview.</motion.p>
+          <motion.div className="mt-6 flex flex-col sm:flex-row gap-3 md:gap-4">
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
-              <Link to="/submit-cv" className="inline-block bg-forest text-cream rounded-full px-6 py-3 font-medium shadow-sm hover:shadow-lg hover:bg-forest/90">Submit Your CV</Link>
+              <Link to="/submit-cv" className="inline-block bg-forest text-cream rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium shadow-sm hover:shadow-lg hover:bg-forest/90">Submit Your CV</Link>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
-              <Link to="/book-consultant" className="inline-block border border-sand text-forest rounded-full px-6 py-3 font-medium bg-white/60 hover:bg-white/80 hover:shadow-md">▶ Book a Consultant</Link>
+              <Link to="/book-consultant" className="inline-block border border-sand text-forest rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium bg-white/60 hover:bg-white/80 hover:shadow-md">▶ Book a Consultant</Link>
             </motion.div>
           </motion.div>
           <div className="mt-6 flex gap-2 lg:gap-4 flex-nowrap overflow-x-auto">

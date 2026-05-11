@@ -11,13 +11,13 @@ const section = {
 export default function Testimonials(){
   return (
     <motion.main initial="hidden" animate="visible" variants={page} className="pt-32">
-      <motion.section className="container mx-auto px-6 py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
-        <h1 className="font-display text-6xl lg:text-7xl text-forest font-bold leading-tight">Success Stories</h1>
-        <p className="mt-6 text-lg text-forest/70 max-w-2xl">Real nurses, real careers. Hear how NurseConnect helped them land their dream roles.</p>
+      <motion.section className="container mx-auto px-6 md:px-12 lg:px-6 py-8 md:py-12 lg:py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-forest font-bold leading-tight">Success Stories</h1>
+        <p className="mt-6 text-base md:text-lg text-forest/70 max-w-2xl">Real nurses, real careers. Hear how NurseConnect helped them land their dream roles.</p>
       </motion.section>
 
-      <motion.section className="container mx-auto px-6 py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
-        <div className="grid lg:grid-cols-3 gap-6">
+      <motion.section className="container mx-auto px-6 md:px-12 lg:px-6 py-8 md:py-12 lg:py-16" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TestimonialCard
             avatar="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100"
             name="Amaka"
@@ -57,10 +57,10 @@ export default function Testimonials(){
         </div>
       </motion.section>
 
-      <motion.section className="container mx-auto px-6 py-16 bg-forest rounded-3xl text-cream" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
-        <h2 className="font-display text-4xl text-cream font-bold">Ready to Join Them?</h2>
-        <p className="mt-4 text-cream/80 max-w-2xl">Start your journey with NurseConnect today and land your dream nursing role.</p>
-        <div className="mt-8 flex gap-4">
+      <motion.section className="container mx-auto px-6 md:px-12 lg:px-6 py-8 md:py-12 lg:py-16 bg-forest rounded-3xl text-cream" variants={section} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }}>
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-cream font-bold">Ready to Join Them?</h2>
+        <p className="mt-4 text-sm md:text-base text-cream/80 max-w-2xl">Start your journey with NurseConnect today and land your dream nursing role.</p>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <a href="/submit-cv" className="rounded-full bg-cream text-forest px-6 py-3 font-semibold">Submit Your CV</a>
           <a href="/book-consultant" className="rounded-full border border-cream text-cream px-6 py-3 font-semibold">Book a Consultant</a>
         </div>
