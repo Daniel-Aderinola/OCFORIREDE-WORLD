@@ -27,3 +27,11 @@ app.use('/api/bookings', bookingRoutes)
 
 // Serve static files from client build
 const clientBuildPath = path.join(baseDir, 'client', 'dist')
+if (fs.existsSync(clientBuildPath)) {
+  app.use(express.static(clientBuildPath))
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientBuildPath, 'index.html'))
+  })
+}
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
