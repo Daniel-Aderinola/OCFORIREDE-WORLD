@@ -91,18 +91,18 @@ export default function HeroSection(){
               <Link to="/book-consultant" className="inline-block border border-sand text-forest rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium bg-white/60 hover:bg-white/80 hover:shadow-md">▶ Book a Consultant</Link>
             </motion.div>
           </motion.div>
-          <div className="mt-6 flex gap-2 lg:gap-4 flex-nowrap overflow-x-auto">
-            <div className="bg-white/70 border border-sand rounded-2xl px-3 py-2 lg:px-5 lg:py-3 flex items-center gap-2 lg:gap-3 shadow-sm shrink-0">
-              <div className="font-display text-lg lg:text-2xl text-forest font-bold">2,400+</div>
-              <div className="text-xs text-forest/70">Nurses Placed</div>
+          <div className="mt-6 grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-4">
+            <div className="bg-white/70 border border-sand rounded-2xl px-2 sm:px-3 py-2 lg:px-5 lg:py-3 flex flex-col items-center gap-1 lg:gap-3 shadow-sm">
+              <div className="font-display text-base sm:text-lg lg:text-2xl text-forest font-bold">2,400+</div>
+              <div className="text-xs text-forest/70 text-center leading-tight">Nurses Placed</div>
             </div>
-            <div className="bg-white/70 border border-sand rounded-2xl px-3 py-2 lg:px-5 lg:py-3 flex items-center gap-2 lg:gap-3 shadow-sm shrink-0">
-              <div className="font-display text-lg lg:text-2xl text-forest font-bold">98%</div>
-              <div className="text-xs text-forest/70">Satisfaction Rate</div>
+            <div className="bg-white/70 border border-sand rounded-2xl px-2 sm:px-3 py-2 lg:px-5 lg:py-3 flex flex-col items-center gap-1 lg:gap-3 shadow-sm">
+              <div className="font-display text-base sm:text-lg lg:text-2xl text-forest font-bold">98%</div>
+              <div className="text-xs text-forest/70 text-center leading-tight">Satisfaction Rate</div>
             </div>
-            <div className="bg-white/70 border border-sand rounded-2xl px-3 py-2 lg:px-5 lg:py-3 flex items-center gap-2 lg:gap-3 shadow-sm shrink-0">
-              <div className="font-display text-lg lg:text-2xl text-forest font-bold">50+</div>
-              <div className="text-xs text-forest/70">Hospital Partners</div>
+            <div className="bg-white/70 border border-sand rounded-2xl px-2 sm:px-3 py-2 lg:px-5 lg:py-3 flex flex-col items-center gap-1 lg:gap-3 shadow-sm col-span-2 lg:col-span-1">
+              <div className="font-display text-base sm:text-lg lg:text-2xl text-forest font-bold">50+</div>
+              <div className="text-xs text-forest/70 text-center leading-tight">Hospital Partners</div>
             </div>
           </div>
           <motion.div
@@ -131,7 +131,7 @@ export default function HeroSection(){
             transition={{ duration: 0.4 }}
           />
           <motion.div
-            className="absolute -top-8 right-24 bg-gradient-to-br from-terra via-[#C25B3F] to-terra/80 rounded-2xl px-4 py-3 text-right shadow-lg border border-terra/20"
+            className="absolute -top-4 right-8 bg-gradient-to-br from-terra via-[#C25B3F] to-terra rounded-2xl px-3 py-2 text-right shadow-lg border border-terra/20"
             initial={{ opacity: 0, y: 18, rotate: 10}}
             animate={{ opacity: 1, y: 0, rotate: 10}}
             transition={{ delay: 0.5, duration: 0.5 }}
