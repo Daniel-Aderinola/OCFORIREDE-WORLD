@@ -14,7 +14,8 @@
     "declaration": false,
     "declarationMap": false,
     "sourceMap": false,
-    "lib": ["ES2020"]
+    "lib": ["ES2020"],
+    "types": ["node"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]
