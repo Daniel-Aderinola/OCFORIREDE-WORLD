@@ -27,3 +27,15 @@ app.use('/api/bookings', bookingRoutes)
 
 // Serve static files from client build
 const clientBuildPath = path.join(baseDir, 'client', 'dist')
+app.use(express.static(clientBuildPath))
+
+// SPA fallback - serve index.html for all unmatched routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'))
+})
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
+
