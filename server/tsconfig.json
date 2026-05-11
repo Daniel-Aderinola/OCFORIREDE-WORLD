@@ -5,11 +5,11 @@
     "outDir": "dist",
     "rootDir": "src",
     "strict": false,
+    "noImplicitAny": false,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "types": ["node"],
     "lib": ["ES2020"]
   },
   "include": ["src"]
