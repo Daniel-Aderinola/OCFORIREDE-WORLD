@@ -13,9 +13,9 @@ app.use(cors({ origin: FRONTEND }))
 app.use(express.json())
 
 // Ensure uploads folder exists
-const baseDir = process.env.NODE_ENV === 'production' 
-  ? path.join(__dirname, '..', '..')
-  : path.join(__dirname, '..', '..')
+const baseDir = process.env.NODE_ENV === 'production'
+    ? path.join(__dirname, '..', '..')
+    : path.join(__dirname, '..', '..')
 const uploadsDir = path.join(baseDir, 'uploads')
 if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true })
 
@@ -27,11 +27,3 @@ app.use('/api/bookings', bookingRoutes)
 
 // Serve static files from client build
 const clientBuildPath = path.join(baseDir, 'client', 'dist')
-if (fs.existsSync(clientBuildPath)) {
-  app.use(express.static(clientBuildPath))
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(clientBuildPath, 'index.html'))
-  })
-}
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
