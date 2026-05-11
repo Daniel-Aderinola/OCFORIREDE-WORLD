@@ -13,22 +13,17 @@ app.use(cors({ origin: FRONTEND }))
 app.use(express.json())
 
 // Ensure uploads folder exists
-const uploadsDir = path.join(__dirname, '..', '..', 'uploads')
+const baseDir = process.env.NODE_ENV === 'production' 
+  ? path.join(__dirname, '..', '..')
+  : path.join(__dirname, '..', '..')
+const uploadsDir = path.join(baseDir, 'uploads')
 if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true })
 
-import cvRoutes from './routes/cvRoutes'
-import bookingRoutes from './routes/bookingRoutes'
+const cvRoutes = require('./routes/cvRoutes').default
+const bookingRoutes = require('./routes/bookingRoutes').default
 
 app.use('/api/cv', cvRoutes)
 app.use('/api/bookings', bookingRoutes)
 
 // Serve static files from client build
-const clientBuildPath = path.join(__dirname, '..', '..', 'client', 'dist')
-if (fs.existsSync(clientBuildPath)) {
-    app.use(express.static(clientBuildPath))
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(clientBuildPath, 'index.html'))
-    })
-}
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+const clientBuildPath = path.join(baseDir, 'client', 'dist')

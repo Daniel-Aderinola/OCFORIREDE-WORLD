@@ -3,12 +3,11 @@ services:
     name: nurseconnect
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build --prefix client && npm run build --prefix server
-    startCommand: npm start --prefix server
+    buildCommand: cd client && npm install && npm run build && cd ../server && npm install && npm run build
+    startCommand: cd server && node dist/index.js
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
-      - key: FRONTEND_URL
-        value: https://nurseconnect.onrender.com
+
