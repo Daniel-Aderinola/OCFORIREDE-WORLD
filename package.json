@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ../server && npm install && npm run build",
-    "start": "node server/dist/index.js"
+    "start": "node server/dist/index.js",
+    "dev": "cd server && npm run dev"
   }
 }
