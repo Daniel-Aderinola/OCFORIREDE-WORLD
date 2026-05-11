@@ -6,11 +6,16 @@
     "rootDir": "src",
     "strict": false,
     "noImplicitAny": false,
+    "strictNullChecks": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
     "lib": ["ES2020"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
