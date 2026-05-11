@@ -72,7 +72,7 @@ export default function Navbar(){
                 </Link>
               ))}
             </nav>
-            <div className="flex flex-col gap-3 mt-6 border-t border-sand pt-6">
+            <div className="flex flex-col gap-3 mt-6 border-t border-sand pt-6 pb-8">
               <Link to="/submit-cv" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-2.5 text-sm sm:text-base font-medium text-center bg-forest text-cream hover:bg-forest/90 transition">Submit CV</Link>
               <Link to="/book-consultant" onClick={()=>setOpen(false)} className="rounded-2xl px-4 py-2.5 text-sm sm:text-base font-medium text-center bg-terra text-white hover:bg-terra/90 transition">Book a Consultant</Link>
             </div>
